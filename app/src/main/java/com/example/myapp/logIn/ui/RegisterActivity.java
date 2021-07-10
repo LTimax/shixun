@@ -19,7 +19,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN
                 , WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_register_step_two);
 
         findViewById(R.id.ib_navigation_back).setOnClickListener(this);
     }

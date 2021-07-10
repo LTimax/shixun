@@ -3,18 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#1A000000"
+    android:layout_height="54dp"
+    android:background="#1AEAEAEA"
     android:gravity="center_horizontal"
     android:orientation="horizontal">
 
     <ImageButton
         android:id="@+id/ib_navigation_back"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
         android:background="@drawable/bg_login_navigation_bar"
         android:contentDescription="@null"
-        app:srcCompat="@mipmap/btn_back_normal" />
+        app:srcCompat="@mipmap/left_arrow" />
 
     <TextView
         android:id="@+id/tv_navigation_label"
