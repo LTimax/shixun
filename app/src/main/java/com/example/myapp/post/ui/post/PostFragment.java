@@ -1,5 +1,6 @@
 package com.example.myapp.post.ui.post;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.myapp.databinding.FragmentPostBinding;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 
 public class PostFragment extends Fragment {
@@ -28,13 +30,13 @@ public class PostFragment extends Fragment {
         binding = FragmentPostBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
+        //悬浮的加号按钮的点击监听
+        FloatingActionButton fab = binding.addPost;
+
+        fab.setOnClickListener(v -> startActivity(new Intent(root.getContext(),AddPostActivity.class)));
+
         final TextView textView = binding.textPost;
-        postViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+        postViewModel.getText().observe(getViewLifecycleOwner(), s -> textView.setText(s));
         return root;
     }
 
