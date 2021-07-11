@@ -1,5 +1,7 @@
 package com.example.myapp.post.ui.post;
 
+import java.sql.Time;
+
 public class Post {
     private Integer ownerId;
     private Integer postId;
@@ -10,9 +12,20 @@ public class Post {
     //是否他人可见
     private  Boolean onlyOwner = false;
 
+    private Time createTime;
+
     public Post(){
 
     }
+
+    public Post(Integer ownerId, String message, Boolean onlyOwner, Time createTime) {
+        this.ownerId = ownerId;
+        this.message = message;
+        this.onlyOwner = onlyOwner;
+        this.createTime = createTime;
+    }
+
+
 
     public Post(Integer ownerId, String message, String[] pictureUrl, Boolean onlyOwner) {
         this.ownerId = ownerId;
@@ -21,6 +34,9 @@ public class Post {
         this.onlyOwner = onlyOwner;
     }
 
+    public void setPostId(Integer postId){
+        this.postId = postId;
+    }
     public Integer getOwnerId() {
         return ownerId;
     }

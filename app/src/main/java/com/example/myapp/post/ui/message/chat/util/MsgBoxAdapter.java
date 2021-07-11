@@ -30,6 +30,7 @@ public class MsgBoxAdapter extends RecyclerView.Adapter<MsgBoxAdapter.ViewHolder
     static class ViewHolder extends RecyclerView.ViewHolder{
 
         ImageView ChatUserIcon;
+        TextView cUserName;
         TextView LatestMsg;
         View MsgBoxesView;
         Context context;
@@ -39,6 +40,7 @@ public class MsgBoxAdapter extends RecyclerView.Adapter<MsgBoxAdapter.ViewHolder
             MsgBoxesView = itemView;
             context = itemView.getContext();
             ChatUserIcon = (ImageView)itemView.findViewById(R.id.chat_user_icon);
+            cUserName = (TextView)itemView.findViewById(R.id.cUser_name);
             LatestMsg = (TextView)itemView.findViewById(R.id.latest_msg);
 
         }
@@ -84,6 +86,7 @@ public class MsgBoxAdapter extends RecyclerView.Adapter<MsgBoxAdapter.ViewHolder
 
         MessageBox messageBox = MsgBoxList.get(position);
         holder.ChatUserIcon.setImageResource(messageBox.getChatUser().getIcon());
+        holder.cUserName.setText(messageBox.getTitle());
         holder.LatestMsg.setText(messageBox.getMsgList().get(messageBox.getMsgList().size()-1).getContent());
 
 

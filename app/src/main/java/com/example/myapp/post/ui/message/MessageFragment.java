@@ -67,7 +67,7 @@ public class MessageFragment extends Fragment {
         public void initMsgBoxes(){
             ChatUser chatUser1 = new ChatUser("uId1",R.mipmap.default_user_icon,"User1");
             Msg msg1 = new Msg("This is first Msg",1);
-            Msg msg2 = new Msg("This is latest Msg",1);
+            Msg msg2 = new Msg("This is latest Msg 1316461616946456546156541651616616161651616516516",1);
             List<Msg> msgList = new ArrayList<>();
             msgList.add(msg1);
             msgList.add(msg2);
